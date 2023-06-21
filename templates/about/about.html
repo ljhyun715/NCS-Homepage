@@ -1,0 +1,207 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+테스트 페이지
+{% endblock title %}
+
+{% block content %}
+<style>
+  #subtitle {
+    background: var(--background);
+  }
+
+  table {
+    font-size: 16px;
+  }
+
+  th {
+    font-weight: 900;
+    color: black;
+  }
+</style>
+
+
+<section id="subtitle">
+  <!-- Content -->
+  <div class="container">
+    <div class="row  align-items-center justify-content-center">
+      <div class="col-md-12 col-lg-9">
+        <div class="banner-content text-center">
+          <!-- Heading -->
+          <h1 class="display-4 mb-4 ">
+            회사소개
+          </h1>
+
+        </div>
+      </div>
+    </div> <!-- / .row -->
+  </div> <!-- / .container -->
+</section>
+
+
+<section class="section">
+  <div class="container" data-aos="fade-up">
+    <div class="row justify-content-center">
+      <h4 class="head">"어제보다는 오늘, 오늘보다는 내일이 기대되는 회사"</h4>
+
+      <p class="text-center">
+        (주)엔씨스퀘어 전 임직원은 “어제보다는 오늘, 오늘보다는 내일이 기대되는 회사”가 될 수 있도록 최선을 다하겠습니다.
+      </p>
+
+      <p class="text-center">
+        원자력발전소의 방사선 관리, 핵종분석, 원자력발전소의 제염/해체, 방사성폐기물의 처리/처분 분야의 기술 개발과 사업을 진행하고 있으며,
+        로봇 메카트로닉스, 사물인터넷, 빅데이터 분석, 인공지능, 블록체 등의 IT S/W및 ICT 기술을 융합한
+        제품 개발 분야의 사업을 진행하여 사업 다각화 환경을 구축하였습니다.
+      </p>
+
+      <p class="text-center">
+        기업부설연구소 운영, 방사능분석센터 운영, IT 부서 운영으로 종합전문기술서비스를 지향하고 있습니다.
+        선두기업으로서 끊임없는 연구와 지속적인 혁신을 통해 최상의 고객 만족을 드리며 끊임없이 혁신하는 모습을 보여드리겠습니다.
+      </p>
+      
+    </div>
+
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <!-- section title -->
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6 text-center">
+        <div class="section-heading">
+          <!-- Heading -->
+          <h2 class="section-title">
+            연혁
+          </h2>
+
+        </div>
+      </div>
+    </div>
+    <!-- section content -->
+    <div class="row justify-content-center">
+      <img src="{% static 'images/about/history.png' %}" alt="" class="img-fluid">
+    </div>
+
+  </div>
+</section>
+
+<section class="section bg-grey">
+  <div class="container">
+
+    <!-- section title -->
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6 text-center">
+        <div class="section-heading">
+          <!-- Heading -->
+          <h2 class="section-title">
+            기업개요
+          </h2>
+
+        </div>
+      </div>
+    </div>
+    <!-- section content -->
+    <div class="row justify-content-center">
+
+      <div class="col-lg-10">
+        <h4>[<span style="color:var(--primary)">NC</span>]<sup>2</sup> "New Clear Nu Clear"</h4><br>
+      </div>
+
+      <div class="col-lg-10">
+        <h4>깨끗하고 편안한 세상을 만드는 곳,<br>
+          차별화된 기술을 제공하여 사업역량을 확보하고 지속가능한 성장을 추구합니다.</h4>
+      </div>
+
+      <div class="col-lg-10">
+        <table>
+          <tr style="text-align:left;">
+            <th>기업명</th>
+            <td> (주) 엔씨스퀘어 </td>
+          </tr>
+          <tr style="text-align:left;">
+            <th>대표이사</th>
+            <td> 김원석 </td>
+          </tr>
+          <tr style="text-align:left;">
+            <th>설립일자</th>
+            <td> 2018년 2월 28일 </td>
+          </tr>
+          <tr style="text-align:left;">
+            <th>본사 소재지</th>
+            <td> 경북 포항시 남구 청암로 87 체인지업그라운드 632호 </td>
+          </tr>
+          <tr style="text-align:left;">
+            <th>업종</th>
+            <td> 전문, 과학 및 기술 서비스업 </td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <!-- section title -->
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6 text-center">
+        <div class="section-heading">
+          <!-- Heading -->
+          <h2 class="section-title">
+            이념/비전/인재상
+          </h2>
+
+        </div>
+      </div>
+    </div>
+    <!-- section content -->
+    <div class="row justify-content-center">
+      <img src="{% static 'images/about/vision.png' %}" alt="" class="img-fluid">
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+
+    <!-- section title -->
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6 text-center">
+        <div class="section-heading">
+          <!-- Heading -->
+          <h2 class="section-title">
+            CI
+          </h2>
+
+        </div>
+      </div>
+    </div>
+    <!-- section content -->
+    <div class="row justify-content-center">
+      <img src="{% static 'images/about/ci.png' %}" alt="" class="img-fluid">
+    </div>
+
+    <div class="row justify-content-end">
+      <form action="#">
+        <button type="submit">jpg download</button>
+      </form>
+      <form action="#">
+        <button type="submit">AI download</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+
+{% endblock content %}

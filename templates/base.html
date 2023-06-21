@@ -62,7 +62,7 @@
     ================================================= -->
   <nav class="navbar navbar-expand-lg navbar-dark trans-navigation fixed-top navbar-togglable">
     <div class="container">
-      <a class="navbar-brand" href="index-3.html">
+      <a class="navbar-brand" href="{% url 'home:index' %}">
         <h3>NCSQUARE</h3>
       </a>
       <!-- Toggler -->
@@ -74,9 +74,31 @@
       <div class="collapse navbar-collapse has-dropdown" id="navbarCollapse">
         <!-- Links -->
         <ul class="navbar-nav ml-auto">
+          <li class="nav-item ">
+            <a href="{% url 'home:about' %}" class="nav-link js-scroll-trigger">
+              회사소개
+            </a>
+          </li>
+
+          <li class="nav-item ">
+            <a href="{% url 'home:product' %}" class="nav-link js-scroll-trigger">
+              제품소개
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a href="{% url 'home:business' %}" class="nav-link js-scroll-trigger">
+              사업분야
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a href="pricing.html" class="nav-link js-scroll-trigger">
+              연구개발
+            </a>
+          </li>
+
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#!" id="navbarWelcome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              회사소개
+              분석서비스
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarWelcome">
               <li><a class="dropdown-item" href="index.html">Home-1</a></li>
@@ -103,27 +125,6 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item ">
-            <a href="about.html" class="nav-link js-scroll-trigger">
-              제품소개
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a href="service.html" class="nav-link js-scroll-trigger">
-              사업분야
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a href="pricing.html" class="nav-link js-scroll-trigger">
-              연구개발
-            </a>
-          </li>
-
-          <li class="nav-item ">
-            <a href="project.html" class="nav-link js-scroll-trigger">
-              분석서비스
-            </a>
-          </li>
 
           <li class="nav-item ">
             <a href="contact.html" class="nav-link">
@@ -143,49 +144,39 @@
 
 
   <footer class="section " id="footer">
-    <div class="overlay footer-overlay"></div>
     <!--Content -->
     <div class="container">
       <div class="row justify-content-start">
         <div class="col-lg-4 col-sm-12">
           <div class="footer-widget">
             <!-- Brand -->
-            <a href="index.html" class="footer-brand text-white">
-              Rappo
+            <a href="index.html" class="footer-brand">
+              NC Square
             </a>
-            <p>Each theme featured at the Bootstrap marketplace has been reviewed by Bootstrap's creators.Lorem ipsum
-              dolor sit amet, consectetur adipisicing elit.</p>
+            <p>깨끗하고 편안한 세상을 만드는 곳,<br>
+            차별화된 기술을 제공하여 사업역량을 확보하고<br>
+            지속 가능한 성장을 추구합니다.</p>
           </div>
         </div>
 
         <div class="col-lg-3 ml-lg-auto col-sm-12">
           <div class="footer-widget">
-            <h3>Account</h3>
+            <h3>ABOUT US</h3>
             <!-- Links -->
             <ul class="footer-links ">
               <li>
-                <a href="#!">
-                  Terms and conditions
+                <a href="#">
+                  대표이사: 김원석
                 </a>
               </li>
               <li>
                 <a href="#!">
-                  Privacy policy
+                  사업자번호: 481-86-00843
                 </a>
               </li>
               <li>
                 <a href="#!">
-                  Affiliate services
-                </a>
-              </li>
-              <li>
-                <a href="#!">
-                  Help and support
-                </a>
-              </li>
-              <li>
-                <a href="#!">
-                  Frequently Asked Question
+                  업종: 전문, 과학 및 기술 서비스업
                 </a>
               </li>
             </ul>
@@ -195,55 +186,50 @@
 
         <div class="col-lg-2 col-sm-6">
           <div class="footer-widget">
-            <h3>About</h3>
+            <h3>CONTACT US</h3>
             <!-- Links -->
             <ul class="footer-links">
               <li>
                 <a href="about.html">
-                  About Us
+                  주소: 포항시 남구 청암로 87<br>
+                  체인지업그라운드 632
                 </a>
               </li>
               <li>
                 <a href="service.html">
-                  Services
+                  FAX: 070-8720-3056
                 </a>
               </li>
               <li>
                 <a href="pricing.html">
-                  Pricing
+                  Tel: 054-286-3826
                 </a>
               </li>
               <li>
                 <a href="project.html">
-                  Recent Projects
+                  E-mail: nc_rnd@ncsquare.co.kr
                 </a>
               </li>
 
-              <li>
-                <a href="contact.html">
-                  Contact
-                </a>
-              </li>
             </ul>
           </div>
         </div>
 
         <div class="col-lg-2 col-sm-6">
           <div class="footer-widget">
-            <h3>Socials</h3>
+            <h3>R&D SERVICE</h3>
             <!-- Links -->
             <ul class="list-unstyled footer-links">
-              <li><a href="https://www.facebook.com/themefisher"><i class="fab fa-facebook-f"></i>Facebook</a></li>
               <li>
-                <a href="https://www.twitter.com/themefisher"><i class="fab fa-twitter"></i>Twitter
+                <a href="#">
+                  원자력환경분석센터 (기업부설연구소)
                 </a>
               </li>
-              <li><a href="https://www.pinterest.com/themefisher/"><i class="fab fa-pinterest-p"></i>Pinterest
-                </a></li>
-              <li><a href="https://themefisher.com/"><i class="fab fa-linkedin"></i>linkedin
-                </a></li>
-              <li><a href="https://www.youtube.com/channel/UCx9qVW8VF0LmTi4OF2F8YdA"><i class="fab fa-youtube"></i>YouTube
-                </a></li>
+              <li>
+                <a href="#">
+                  Tel: 010-6259-8529
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -258,8 +244,7 @@
               Copyright &copy; <script>
                 var CurrentYear = new Date().getFullYear()
                 document.write(CurrentYear)
-              </script>. Designed &amp; Developed by <a class="current-year" href="https://themefisher.com/">Themefisher</a>
-            </p>
+              </script> Ncsquare. All Right Reserved.</p>
           </div>
         </div>
       </div> <!-- / .row -->
