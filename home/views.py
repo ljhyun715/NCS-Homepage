@@ -18,3 +18,6 @@ def product(request):
 
 def business(request):
     return render(request, 'business/business.html')
+
+def rnd(request):
+    return render(request, 'rnd/rnd.html')

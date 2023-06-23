@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+테스트 페이지
+{% endblock title %}
+
+{% block content %}
+<style>
+  #subtitle {
+    background: var(--background);
+  }
+
+  .rnd {
+    background: linear-gradient(30deg, rgba(121, 110, 255, 0.95) 0%, rgba(33, 200, 122, 0.95) 100%),
+    url({% static 'images/rnd/main.png' %});
+  }
+</style>
+
+
+<section id="subtitle">
+  <!-- Content -->
+  <div class="container">
+    <div class="row  align-items-center justify-content-center">
+      <div class="col-md-12 col-lg-9">
+        <div class="banner-content text-center">
+          <!-- Heading -->
+          <h1 class="display-4 mb-4 ">
+            연구 개발
+          </h1>
+
+        </div>
+      </div>
+    </div> <!-- / .row -->
+  </div> <!-- / .container -->
+</section>
+
+
+<section class="section">
+  <div class="container" data-aos="fade-up">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <img src="{% static 'images/rnd/main.png' %}" alt="" class="img-fluid">
+      </div>
+
+      <div class="col-lg-10 mt-4">
+        <h4 class="text-center">
+          (주)엔씨스퀘어 기업부설연구소는 2020년에 설립되었습니다.  <br>
+          분석 센터에서는 감마핵종 / 핵종분석 / 전 알파 / 전 베타,알파 핵정분석이 가능하며,<br>
+          환경 방사능 감시업무와 원자력해체 산업 준비를 위한 폐기물 핵종 분석 연구와<br>
+          경북 지역의 원자력 발전소 집중 지역으로 지역주민의 안전을 위해 감시 업무의 연구도 같이 진행하고 있습니다.<br>
+        </h4>
+      </div>
+
+
+      <div class="col-lg-4 mt-4">
+        <div class="row justify-content-center">
+          <img src="{% static 'images/rnd/lab-1.png' %}" alt="" class="img-fluid">
+          <p>계측실</p>
+        </div>
+      </div>
+
+
+      <div class="col-lg-4 mt-4">
+        <div class="row justify-content-center">
+          <img src="{% static 'images/rnd/lab-2.png' %}" alt="" class="img-fluid">
+          <p>계측실</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 mt-4">
+        <div class="row justify-content-center">
+          <img src="{% static 'images/rnd/lab-3.png' %}" alt="" class="img-fluid">
+          <p>계측실</p>
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+  </div>
+</section>
+
+
+<section class="section bg-grey">
+  <div class="container" data-aos="fade-up">
+
+    <div class="row justify-content-center">
+
+    </div>
+
+
+  </div>
+</section>
+
+
+
+
+{% endblock content %}
