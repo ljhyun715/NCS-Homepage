@@ -21,3 +21,6 @@ def business(request):
 
 def rnd(request):
     return render(request, 'rnd/rnd.html')
+
+def service(request):
+    return render(request, 'service/service.html')

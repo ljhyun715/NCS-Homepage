@@ -91,7 +91,7 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a href="pricing.html" class="nav-link js-scroll-trigger">
+            <a href="{% url 'home:rnd' %}" class="nav-link js-scroll-trigger">
               연구개발
             </a>
           </li>
@@ -101,7 +101,7 @@
               분석서비스
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarWelcome">
-              <li><a class="dropdown-item" href="index.html">Home-1</a></li>
+              <li><a class="dropdown-item" href="{% url 'home:service' %}">원자력환경분석센터</a></li>
               <li><a class="dropdown-item" href="index-2.html">Home-2</a></li>
               <li><a class="dropdown-item" href="index-3.html">Home-3</a></li>
               <li><a class="dropdown-item" href="index-4.html">Home-4</a></li>
@@ -127,7 +127,7 @@
           </li>
 
           <li class="nav-item ">
-            <a href="contact.html" class="nav-link">
+            <a href="{% url 'account:login' %}" class="nav-link">
               로그인 | 회원가입
             </a>
           </li>

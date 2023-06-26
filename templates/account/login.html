@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+테스트 페이지
+{% endblock title %}
+
+{% block content %}
+<style>
+
+</style>
+
+
+<section id="subtitle">
+  <!-- Content -->
+  <div class="container">
+    <div class="row  align-items-center justify-content-center">
+      <div class="col-md-12 col-lg-9">
+        <div class="banner-content text-center">
+          <!-- Heading -->
+          <h1 class="display-4 mb-4 ">
+            로그인
+          </h1>
+
+        </div>
+      </div>
+    </div> <!-- / .row -->
+  </div> <!-- / .container -->
+</section>
+
+
+
+<section class="section">
+  <div class="container">
+
+    <!-- section title -->
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6 text-center">
+        <div class="section-heading">
+          <!-- Heading -->
+          <h2 class="sub-title2">
+            (주)엔씨스퀘어에 오신것을 환영합니다.
+          </h2>
+          <p>로그인하시면 (주)엔씨스퀘어에서 제공하는 분석서비스를 이용하실 수 있습니다.<br>
+            회원님의 아이디/비밀번호를 입력해주세요.</p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-5">
+        <form method="post" class="contact_form" action="#">
+
+          <div class="form-group">
+            {% csrf_token %}
+            <label class="h6 small d-block text-uppercase">
+              아이디
+              <span class="text-danger">*</span>
+            </label>
+
+            <div class="input-group">
+              <input class="form-control" name="id" id="id" required="" placeholder="ID" type="text">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="h6 d-block text-uppercase">
+              비밀번호
+              <span class="text-danger">*</span>
+            </label>
+
+            <div class="input-group">
+              <input class="form-control" name="pw" id="pw" required="" placeholder="PW" type="password">
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-between">
+            <p class="small pt-3">아이디찾기 | 비밀번호 찾기 | 회원가입</p>
+
+            <input name="submit" type="submit" class="btn btn-tertiary btn-circled" value="로그인">
+          </div>
+
+
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+{% endblock content %}

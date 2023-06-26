@@ -8,10 +8,6 @@
 
 {% block content %}
 <style>
-  #subtitle {
-    background: var(--background);
-  }
-
   .rnd {
     background: linear-gradient(30deg, rgba(121, 110, 255, 0.95) 0%, rgba(33, 200, 122, 0.95) 100%),
     url({% static 'images/rnd/main.png' %});
@@ -44,8 +40,8 @@
         <img src="{% static 'images/rnd/main.png' %}" alt="" class="img-fluid">
       </div>
 
-      <div class="col-lg-10 mt-4">
-        <h4 class="text-center">
+      <div class="col-lg-12 mt-4">
+        <h4 class="text-center" style="line-height:2.0">
           (주)엔씨스퀘어 기업부설연구소는 2020년에 설립되었습니다.  <br>
           분석 센터에서는 감마핵종 / 핵종분석 / 전 알파 / 전 베타,알파 핵정분석이 가능하며,<br>
           환경 방사능 감시업무와 원자력해체 산업 준비를 위한 폐기물 핵종 분석 연구와<br>
@@ -54,33 +50,36 @@
       </div>
 
 
-      <div class="col-lg-4 mt-4">
-        <div class="row justify-content-center">
+      <div class="col-lg-4 col-sm-6 col-md-6 mt-4">
+        <div class="process-block">
           <img src="{% static 'images/rnd/lab-1.png' %}" alt="" class="img-fluid">
-          <p>계측실</p>
+
+          <h3>계측실</h3>
+          <p>감마분광분석기, 액체섬광계수기, 알타베타계수기 등 방사능 계측을 위한 공간이다.</p>
         </div>
       </div>
-
-
-      <div class="col-lg-4 mt-4">
-        <div class="row justify-content-center">
+      <div class="col-lg-4 col-sm-6 col-md-6 mt-4">
+        <div class="process-block">
           <img src="{% static 'images/rnd/lab-2.png' %}" alt="" class="img-fluid">
-          <p>계측실</p>
+
+          <h3>전처리실</h3>
+          <p>방사능 계측을 위한 전처리 공간이며 전기오븐, 전기회화로, Pyrloyser, H-3증류장치 등을 보유하고 있다.</p>
         </div>
       </div>
-
-      <div class="col-lg-4 mt-4">
-        <div class="row justify-content-center">
+      <div class="col-lg-4 col-sm-6 col-md-6 mt-4">
+        <div class="process-block">
           <img src="{% static 'images/rnd/lab-3.png' %}" alt="" class="img-fluid">
-          <p>계측실</p>
+
+          <h3>사무실</h3>
+          <p>기업부설연구소의 사무를 보는 공간으로 방사능 분석 시료의 의뢰 및 상담이 이루어진다.</p>
         </div>
       </div>
-
 
 
 
 
     </div>
+
   </div>
 </section>
 
@@ -89,8 +88,78 @@
   <div class="container" data-aos="fade-up">
 
     <div class="row justify-content-center">
+      <div class="col-lg-12">
+
+        <div class="text-center">
+          <div class="section-heading">
+            <h2 class="section-title">
+              장비현황
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3">
+        <img src="{% static 'images/rnd/LSC.png' %}" alt="" class="img-fluid">
+      </div>
+      <div class="col-lg-9 d-flex flex-column justify-content-center">
+        <h3>액체섬광계수기 (LSC, Liquid Scintillation Counter)</h3>
+        <ul>
+          <li>Model : 300 SL (Hidex)</li>
+          <li>제조회사 : Hidex / 핀란드</li>
+          <li>구입일자 : 2021</li>
+          <li>액체섬광계수법을 사용하여 시료 안에 포함된 극 저준위 알파 및 베타 방출 핵종을 측정하고 분석하는 기기이며
+            이 기기는 TDCR (Triple to Double Ratio coincidence) method를 구현할 수 있는 3개의 detector로 이뤄져 있어, 
+            높은 측정 효율을 보여준다.</li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3">
+        <img src="{% static 'images/rnd/HPGe.png' %}" alt="" class="img-fluid">
+      </div>
+      <div class="col-lg-9 d-flex flex-column justify-content-center">
+        <h3>감마선분광분석기  (HPGe, High Purity Germanium spectrometer)</h3>
+        <ul>
+          <li>Model : GCD-40190</li>
+          <li>제조회사 : BSI</li>
+          <li>구입일자 : 2021</li>
+          <li>원자력산업, 환경방사능 및 식품방사능 등에서 감마선 검출 및 핵종 분석이 가능하다.
+            시료에서 방출된 감마선은 고유의 에너지 값을 가지는데, 고순도 게르마늄 검출기는 감마방출핵종의 에너지(keV) 및 세기(counter)를
+            분석할 수 있도록 전기적 신호로 변환해주는 역할을 한다. 이 신호를 통해 감마선방출핵종을 정량/정성 분석을 할 수 있다.
+            40keV~10Mev 에너지 범위 내 측정 가능하다.
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3">
+        <img src="{% static 'images/rnd/AlphaBeta.png' %}" alt="" class="img-fluid">
+      </div>
+      <div class="col-lg-9 d-flex flex-column justify-content-center">
+        <h3>알파베타분석기 (Low background alphabeta counting system)</h3>
+        <ul>
+          <li>Model: WPC 1050</li>
+          <li>제조회사 : AMETEK</li>
+          <li>구입일자: 2022</li>
+          <li>장비설명: 시료 내 전알파/베타 방출체로부터 방출되는 알파/베타선의 방사능을 측정하는 기기</li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3">
+        <img src="{% static 'images/rnd/AlphaSpectrometer.png' %}" alt="" class="img-fluid">
+      </div>
+      <div class="col-lg-9 d-flex flex-column justify-content-center">
+        <h3>알파핵종분석기 (Alpha Spectrometer)</h3>
+        <ul>
+          <li>Model : Amber-4</li>
+          <li>제조회사 : BIS</li>
+          <li>구입일자: 2023</li>
+          <li>장비설명: 알파핵종계측장비로 U/Pu/Am/Th 계열 핵종을 분석한다.</li>
+        </ul>
+      </div>
 
     </div>
+
+
 
 
   </div>

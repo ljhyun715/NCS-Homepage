@@ -29,6 +29,8 @@
 :root {
   --primary: #BAE3FF;
   --secondary: #16567F;
+  --tertiary: #21C87A;
+  --highlight: #126AC1;
   --background: linear-gradient(30deg, #ADD5F9, #A5DFED);
 }
 
@@ -134,10 +136,20 @@ h6 {
   line-height: 1.5rem;
 }
 
+.sub-title2 {
+  color: var(--highlight);
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+
 .bg-grey {
   background: #F4F7FC;
 }
 
+#subtitle {
+  background: var(--background);
+}
 /*--------------------
 Common Styles
 -----------------*/
@@ -191,7 +203,7 @@ img {
   font-weight: 700;
   position: relative;
   text-transform: uppercase;
-  padding: 1rem 2.4rem;
+  padding: 0.8rem 2.4rem;
   border: 0.1rem solid transparent;
   transition: all 0.2s ease-in-out;
   letter-spacing: 0.5px;
@@ -202,7 +214,7 @@ img {
   width: 4.20313rem !important;
   height: 4.20313rem !important;
   padding: 0 !important;
-  border-radius: 50%;
+  border-radius: 20px;
   align-items: center;
   justify-content: center;
 }
@@ -256,6 +268,22 @@ img {
   border-color: #232323 !important;
   color: #fff;
 }
+
+
+.btn-tertiary {
+  background: var(--tertiary) !important;
+  border-color: var(--tertiary) !important;
+  color: #fff;
+  font-size: 15px;
+
+}
+
+.btn-tertiary:hover {
+  background: #a7f1ce !important;
+  border-color: #a7f1ce !important;
+  color: #fff;
+}
+
 
 .shadow-sm-2 {
   box-shadow: 0 7px 22px rgba(0, 0, 0, 0.08);
@@ -327,6 +355,9 @@ a:focus {
 .header-socials li a {
   color: var(--primary);
 }
+
+
+
 
 /*-----------------
  LOGO BAR
@@ -774,7 +805,7 @@ ul.dropdown-menu li {
   margin-bottom: 30px !important;
 }
 .banner-content .display-4 {
-  color: #fff;
+  color: var(--secondary);
   font-weight: 600;
 }
 
