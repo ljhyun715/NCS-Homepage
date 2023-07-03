@@ -1,0 +1,21 @@
+[uwsgi]
+chdir = /home/ncdev/ncweb
+module = ncweb.wsgi:application
+home = /home/ncdev/venv
+static-map = /static=/static_root/
+
+uid = ncdev
+gid = ncdev
+
+socket = /home/ncdev/ncweb/myncweb.sock
+chmod-socket = 666
+chown-socket = ncdev:ncdev
+
+enable-threads = true
+master = true
+vacuum = true
+pidfile = /home/ncdev/ncweb/myncweb.pid
+logto = /home/ncdev/ncweb/log/uwsgi/@(exec://date +%%Y-%%m-%%d).log
+log-reopen = true
+
+## WSGI_APPLICATION = 'ncweb.wsgi.application'
