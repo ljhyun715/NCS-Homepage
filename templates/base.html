@@ -45,7 +45,7 @@
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
   <!--Favicon-->
-  <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
+  <link rel="shortcut icon" href="{% static 'images/nc_favicon.png' %}" type="image/x-icon">
 
 </head>
 
@@ -116,11 +116,25 @@
             </ul>
           </li>
 
-          <li class="nav-item ">
-            <a href="{% url 'account:login' %}" class="nav-link">
-              로그인 | 회원가입
+
+          {% if user.is_authenticated %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#!" id="navbarWelcome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{ user.username }}님
             </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarWelcome">
+              <li><a class="dropdown-item" href="#">마이페이지</a></li>
+              <li><a class="dropdown-item" href="{% url 'account:logout' %}">로그아웃</a></li>
+
+            </ul>
           </li>
+          {% else %}
+          <a href="{% url 'account:login' %}" class="nav-link">
+            로그인 | 회원가입
+          </a>
+          {% endif %}
+
+
         </ul>
       </div> <!-- / .navbar-collapse -->
     </div> <!-- / .container -->
@@ -144,8 +158,8 @@
               NC Square
             </a>
             <p>깨끗하고 편안한 세상을 만드는 곳,<br>
-            차별화된 기술을 제공하여 사업역량을 확보하고<br>
-            지속 가능한 성장을 추구합니다.</p>
+              차별화된 기술을 제공하여 사업역량을 확보하고<br>
+              지속 가능한 성장을 추구합니다.</p>
           </div>
         </div>
 

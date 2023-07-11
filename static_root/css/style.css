@@ -884,6 +884,15 @@ ABOUT-2
 /*----------------------
  SERVICE
 -----------------------*/
+
+
+.q-service:hover {
+  cursor: pointer;
+  box-shadow: 2px 1px 10px 1px var(--primary);
+  border-radius: 10px;
+}
+
+
 h5.subtitle {
   color: var(--primary);
   margin-bottom: 10px;
@@ -922,7 +931,9 @@ h5.subtitle {
 }
 
 .service-block {
-  margin-bottom: 50px;
+  padding: 1rem;
+  padding-bottom: 0;
+  margin-bottom: 30px;
 }
 
 .service-inner-content h4 {

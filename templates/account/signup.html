@@ -8,7 +8,10 @@
 
 {% block content %}
 <style>
-
+  th {
+    background-color: #bae3ff54;
+    font-weight: 700;
+  }
 </style>
 
 
@@ -20,7 +23,7 @@
         <div class="banner-content text-center">
           <!-- Heading -->
           <h1 class="display-4 mb-4 ">
-            로그인
+            회원가입
           </h1>
 
         </div>
@@ -34,24 +37,10 @@
 <section class="section">
   <div class="container">
 
-    <!-- section title -->
-    <div class="row justify-content-center">
-      <div class="col-md-8 col-lg-6 text-center">
-        <div class="section-heading">
-          <!-- Heading -->
-          <h2 class="sub-title2">
-            (주)엔씨스퀘어에 오신것을 환영합니다.
-          </h2>
-          <p>로그인하시면 (주)엔씨스퀘어에서 제공하는 분석서비스를 이용하실 수 있습니다.<br>
-            회원님의 아이디/비밀번호를 입력해주세요.</p>
-
-        </div>
-      </div>
-    </div>
 
     <div class="row justify-content-center">
       <div class="col-lg-5">
-        <form method="post" class="contact_form" action="{% url 'account:login' %}">
+        <form method="post" class="contact_form" action="{% url 'account:signup' %}">
           {% csrf_token %}
           {% include 'account/form_errors.html' %}
 
@@ -69,11 +58,19 @@
               </div>
           {% endfor %}
 
-          <div class="d-flex justify-content-between">
-            <p class="small pt-3">아이디찾기 | 비밀번호 찾기 | 회원가입</p>
+          <table class="table table-bordered w-100">
+            {% for field in form %}
+            <tr>
+              <th>{{ field.label_tag }}</th>
+              <td><div class="input-group">
+                <input class="form-control" name="{{ field.html_name }}" id="{{ field.id_for_label }}" type="{{ field.field.widget.input_type }}" placeholder="{{ field.label }}">
+              </div></td>
+            </tr>
+            {% endfor %}
 
-            <input name="submit" type="submit" class="btn btn-tertiary btn-circled" value="로그인">
-          </div>
+          </table>
+            <input name="submit" type="submit" class="btn btn-tertiary btn-circled" value="회원가입">
+
 
 
         </form>

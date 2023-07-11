@@ -15,7 +15,11 @@ import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+
 LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+AUTH_USER_MODEL = 'account.User'
 
 
 # Quick-start development settings - unsuitable for production
@@ -29,7 +33,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-LOGIN_REDIRECT_URL = '/'
 
 # Application definition
 
@@ -82,8 +85,12 @@ WSGI_APPLICATION = 'ncweb.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'ncweb',
+        'USER': 'ncwebDEV',
+        'PASSWORD': '$ncweb0705D',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
